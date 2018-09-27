@@ -13,11 +13,11 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = DynamicCraft.MOD_ID,
     name = DynamicCraft.MOD_NAME,
     version = DynamicCraft.MOD_VERSION,
-    dependencies = "required-after:Forge@[14.23.4.2759,)",
+    dependencies = "required-after:forge@[14.23.4.2759,)",
     useMetadata = true)
 public class DynamicCraft {
-    public static final String MOD_ID = "modtut";
-    public static final String MOD_NAME = "Mod tutorials";
+    public static final String MOD_ID = "dynamiccraft";
+    public static final String MOD_NAME = "DynamicCraft";
     public static final String MOD_VERSION = "0.0.1";
 
     @SidedProxy(clientSide = "com.chrmills.dynamiccraft.proxy.ClientProxy",
