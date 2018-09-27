@@ -1,7 +1,11 @@
 package com.chrmills.dynamiccraft.proxy;
 
+import com.chrmills.dynamiccraft.ModBlocks;
+import com.chrmills.dynamiccraft.block.BlackSand;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -22,9 +26,12 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
+        event.getRegistry().register(new BlackSand());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
+        event.getRegistry().register(
+            new ItemBlock(ModBlocks.BLACK_SAND).setRegistryName(ModBlocks.BLACK_SAND.getRegistryName()));
     }
 }
