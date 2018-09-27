@@ -4,8 +4,8 @@ import com.chrmills.dynamiccraft.ModBlocks;
 
 import net.minecraft.world.biome.Biome;
 
-public class BiomeBlackSandBeach extends Biome {
-    public BiomeBlackSandBeach() {
+public class BlackSandBeach extends Biome {
+    public BlackSandBeach() {
         super(new BiomeProperties("BlackSandBeach")
             .setBaseHeight(0.0F)
             .setHeightVariation(0.025F)

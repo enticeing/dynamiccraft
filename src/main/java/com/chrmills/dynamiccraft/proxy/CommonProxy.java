@@ -1,7 +1,8 @@
 package com.chrmills.dynamiccraft.proxy;
 
 import com.chrmills.dynamiccraft.ModBlocks;
-import com.chrmills.dynamiccraft.biome.overworld.BiomeBlackSandBeach;
+import com.chrmills.dynamiccraft.biome.ModBiomes;
+import com.chrmills.dynamiccraft.biome.overworld.BlackSandBeach;
 import com.chrmills.dynamiccraft.block.BlackSand;
 
 import net.minecraft.block.Block;
@@ -42,12 +43,6 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerBiomes(RegistryEvent.Register<Biome> event) {
-        BiomeBlackSandBeach biomeBlackSandBeach = new BiomeBlackSandBeach();
-        IForgeRegistry<Biome> biomeRegistry = event.getRegistry();
-        biomeRegistry.register(biomeBlackSandBeach.setRegistryName("BlackSandBeach"));
-
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM,
-            new BiomeManager.BiomeEntry(biomeBlackSandBeach, 7000000));
-        BiomeDictionary.addTypes(biomeBlackSandBeach, BiomeDictionary.Type.BEACH);
+        ModBiomes.register(event.getRegistry());
     }
 }
