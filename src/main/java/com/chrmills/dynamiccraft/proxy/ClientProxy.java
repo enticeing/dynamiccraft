@@ -1,5 +1,7 @@
 package com.chrmills.dynamiccraft.proxy;
 
+import com.chrmills.dynamiccraft.block.ModBlocks;
+
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -15,5 +17,6 @@ public class ClientProxy extends CommonProxy {
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
+        ModBlocks.registerModels(event);
     }
 }
